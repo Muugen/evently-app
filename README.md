@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Total Recall Api
 
-## Getting Started
+## Development
 
-First, run the development server:
+## Prerequisites
+
+- Node.js 18.x
+- PNPM installed globally (`npm install -g pnpm`)
+- tsx installed globally (`npm install -g tsx`)
+- A Neon account (or access to a postgresql instance)
+
+### Links
+
+- locale app: http://localhost:3000
+
+### Setup
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Muugen/evently-app.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Configure environment variables in `.env`:
 
-## Learn More
+```bash
+DATABASE_URL=""
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Generate the Prisma client:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm prisma:generate
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## After pulling
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Apply Prisma schema to neon/cloud database
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpx prisma migrate dev
+```
+
+note: this command will create a new migration file in the `prisma/migrations` directory and it will also generate the Prisma client.
+
+### Seed
+
+- Seed mock data:
+
+```bash
+pnpm prisma:seed
+```
+
+### Running the Application
+
+- Development mode:
+
+```bash
+pnpm dev
+```
+
+### Tests
+
+- Run tests:
+
+```bash
+pnpm test
+```
+
+## Good to know
+
+- if `schema.prisma` changes:
+
+```bash
+pnpm prisma:generate
+```
