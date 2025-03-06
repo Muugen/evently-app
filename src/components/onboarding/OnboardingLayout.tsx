@@ -36,7 +36,7 @@ export default function OnboardingLayout({
 
   return (
     <div className="relative flex flex-col h-screen bg-white overflow-hidden">
-      <div className="relative h-2/3 overflow-hidden rounded-b-[32px]">
+      <div className="relative h-2/3 overflow-hidden border-none">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/30 z-10" />
         <Image
           src={imageUrl}
@@ -45,7 +45,7 @@ export default function OnboardingLayout({
           style={{ objectFit: "cover" }}
           priority
         />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-white rounded-t-[32px] transform translate-y-16"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-white border-none transform translate-y-16"></div>
       </div>
 
       <div className="px-8 pt-8 pb-4 -mt-16 z-10 flex-1 flex flex-col">

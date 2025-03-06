@@ -15,7 +15,7 @@ export default function WelcomePage() {
 
   return (
     <div className="absolute inset-0 flex flex-col bg-white">
-      <div className="relative h-2/3 w-full overflow-hidden rounded-b-[32px]">
+      <div className="relative h-2/3 w-full overflow-hidden border-none">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/30 z-10" />
         <div className="absolute inset-0">
           <Image
@@ -27,7 +27,7 @@ export default function WelcomePage() {
             priority
           />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-white rounded-t-[32px] transform translate-y-16"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-white border-none transform translate-y-16"></div>
       </div>
 
       <div className="px-8 pt-12 pb-4 -mt-16 z-10 flex-1 flex flex-col items-center">
