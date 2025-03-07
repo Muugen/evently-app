@@ -44,7 +44,7 @@ export default function OnboardingPage() {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentStep}

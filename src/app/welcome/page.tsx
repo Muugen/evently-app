@@ -15,7 +15,7 @@ export default function WelcomePage() {
 
   return (
     <div className="absolute inset-0 flex flex-col bg-white">
-      <div className="relative h-2/3 w-full overflow-hidden rounded-b-[32px]">
+      <div className="relative h-2/3 w-full overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/30 z-10" />
         <div className="absolute inset-0">
           <Image
@@ -27,10 +27,25 @@ export default function WelcomePage() {
             priority
           />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-white rounded-t-[32px] transform translate-y-16"></div>
+        <div className="absolute bottom-0 left-0 right-0 z-20">
+          <svg
+            width="100%"
+            viewBox="0 0 428 181"
+            fill="none"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full"
+            style={{ minHeight: "100px" }}
+          >
+            <path
+              d="M0 181.115C0 167.295 8.36529 154.85 21.1624 149.632L381.162 2.83816C403.525 -6.28063 428 10.1706 428 34.3214V181.11H0V181.115Z"
+              fill="white"
+            />
+          </svg>
+        </div>
       </div>
 
-      <div className="px-8 pt-12 pb-4 -mt-16 z-10 flex-1 flex flex-col items-center">
+      <div className="px-8 pt-4 pb-4 z-10 flex-1 flex flex-col items-center">
         <h1 className="text-3xl font-bold mb-1">Welcome</h1>
         <h2 className="text-3xl font-bold text-primary mb-1">eventrue</h2>
         <p className="text-sm text-center mb-auto text-gray-600">
