@@ -1,4 +1,4 @@
-# Total Recall Api
+# Eventrue APP
 
 ## Development
 
