@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prisma:generate": "pnpx prisma generate",
-    "prisma:seed": "tsx prisma/seed.ts"
+    "prisma:seed": "tsx src/db/seed.ts"
   },
   "dependencies": {
     "@heroui/button": "2.2.13",
