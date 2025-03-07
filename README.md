@@ -1,4 +1,4 @@
-# Eventrue APP
+# Eventrue App
 
 ## Development
 
