@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prisma:generate": "pnpx prisma generate",
     "prisma:seed": "tsx prisma/seed.ts"
   },
