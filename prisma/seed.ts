@@ -120,8 +120,8 @@ async function main() {
     seedEvents.map((event) =>
       prisma.event.create({
         data: event,
-      })
-    )
+      }),
+    ),
   );
 
   // Création d'un utilisateur de test
@@ -145,8 +145,8 @@ async function main() {
           url: `https://picsum.photos/id/${index + 100}/800/600`,
           uploaded_at: new Date(),
         },
-      })
-    )
+      }),
+    ),
   );
 
   console.log(`✅ Seed terminé : ${events.length} événements créés`);

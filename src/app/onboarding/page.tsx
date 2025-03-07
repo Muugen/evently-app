@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import OnboardingStep from "@/components/onboarding/OnboardingStep";
 import { AnimatePresence, motion } from "framer-motion";
+
+import OnboardingStep from "@/components/onboarding/OnboardingStep";
 
 export default function OnboardingPage() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -48,11 +49,11 @@ export default function OnboardingPage() {
       <AnimatePresence mode="wait">
         <motion.div
           key={currentStep}
-          initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0, x: 100 }}
           style={{ width: "100%", height: "100%" }}
+          transition={{ duration: 0.3 }}
         >
           <OnboardingStep
             data={onboardingData[currentStep - 1]}

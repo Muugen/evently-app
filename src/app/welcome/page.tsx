@@ -19,23 +19,23 @@ export default function WelcomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/30 z-10" />
         <div className="absolute inset-0">
           <Image
-            src="/assets/images/events-grid.png"
-            alt="Événements"
             fill
-            sizes="100vw"
-            style={{ objectFit: "cover", objectPosition: "center" }}
             priority
+            alt="Événements"
+            sizes="100vw"
+            src="/assets/images/events-grid.png"
+            style={{ objectFit: "cover", objectPosition: "center" }}
           />
         </div>
         <div className="absolute bottom-0 left-0 right-0 z-20">
           <svg
-            width="100%"
-            viewBox="0 0 428 181"
+            className="w-full"
             fill="none"
             preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-full"
             style={{ minHeight: "100px" }}
+            viewBox="0 0 428 181"
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M0 181.115C0 167.295 8.36529 154.85 21.1624 149.632L381.162 2.83816C403.525 -6.28063 428 10.1706 428 34.3214V181.11H0V181.115Z"
@@ -62,7 +62,7 @@ export default function WelcomePage() {
 
           <div className="text-sm text-center">
             Already a member?{" "}
-            <Link href="/login" className="text-primary">
+            <Link className="text-primary" href="/login">
               Login
             </Link>
           </div>
